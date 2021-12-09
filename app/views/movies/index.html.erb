@@ -1,0 +1,15 @@
+<h1>Movies</h1>
+
+<div class="content-display-movies">
+<% @movies.each do |e| %>
+<div class="movie-content">
+<div class="movie" style="background-image: url(<%=e.poster_url%>)" ></div>
+<div class="text_content">
+<p> <%= e.title %> </p>
+<% number_of_stars = (e.rating.round(0))/2%>
+<p><%="⭐️" * number_of_stars%></p>
+<p> <%= e.overview %> </p>
+</div>
+</div>
+<%end%>
+</div>
